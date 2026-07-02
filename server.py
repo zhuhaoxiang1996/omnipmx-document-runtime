@@ -410,12 +410,12 @@ TOOLS: dict[str, dict[str, Any]] = {
     },
     "markdown_to_docx": {
         "description": "Generate a DOCX file from Markdown/text and return base64 file content.",
-        "inputSchema": {"type": "object", "properties": {"markdown": {"type": "string"}, "text": {"type": "string"}, "filename": {"type": "string"}}, "required": []},
+        "inputSchema": {"type": "object", "properties": {"markdown": {"type": "string"}, "filename": {"type": "string"}}, "required": ["markdown"]},
         "handler": markdown_to_docx,
     },
     "markdown_to_pdf": {
         "description": "Generate a PDF file from Markdown/text and return base64 file content.",
-        "inputSchema": {"type": "object", "properties": {"markdown": {"type": "string"}, "text": {"type": "string"}, "filename": {"type": "string"}}, "required": []},
+        "inputSchema": {"type": "object", "properties": {"markdown": {"type": "string"}, "filename": {"type": "string"}}, "required": ["markdown"]},
         "handler": markdown_to_pdf,
     },
     "csv_to_plot_png": {
